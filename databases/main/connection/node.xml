@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.jdbc.pool.JDBCPoolManager" created="2020-12-03T14:41:11.364+01:00" lastModified="2020-12-03T14:41:11.364+01:00" leaf="true" name="Connection" version="2">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>example.databases.main.model</references>
+    <references>nabu.misc.auditing.types.model</references>
+    <references>nabu.integrations.entsoe.types.model</references>
+    <references>nabu.web.analysis.types.model</references>
+    <references>nabu.cms.mailbox.types.model</references>
+    <references>nabu.analytics.cep.types.model</references>
+    <references>nabu.cms.choice.types.model</references>
+    <references>nabu.testing.runner.types.model</references>
+    <references>nabu.cms.link.types.model</references>
+    <references>nabu.management.logger.types.model</references>
+    <references>nabu.misc.splitTesting.types.model</references>
+    <references>nabu.providers.notifier.database.types.model</references>
+    <references>nabu.cms.oauth2.types.emodel</references>
+    <references>nabu.cms.chat.types.model</references>
+    <references>nabu.integrations.ice.types.model</references>
+    <references>nabu.cms.humanTask.types.emodel</references>
+    <references>nabu.frameworks.tasks.types.model</references>
+    <references>nabu.cms.core.types.emodel</references>
+    <references>nabu.cms.attachment.types.model</references>
+    <references>nabu.management.report.types.model</references>
+    <references>nabu.frameworks.events.database.model</references>
+    <references>nabu.misc.workflow.types.model</references>
+</node>

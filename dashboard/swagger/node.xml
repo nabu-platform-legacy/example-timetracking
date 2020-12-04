@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.swagger.provider.SwaggerProviderManager" created="2020-12-04T13:47:58.525+01:00" lastModified="2020-12-04T13:47:58.525+01:00" leaf="true" name="Swagger" version="2">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+</node>

@@ -1,0 +1,67 @@
+{
+	"label": "skeleton",
+	"rows": [
+		{
+			"name": "Top Menu",
+			"class": "full-width",
+			"condition": "$services.user.loggedIn",
+			"cells": [
+				{
+					"name": "Main Menu",
+					"alias": "page-actions",
+					"state": {
+						"class": "menu",
+						"autoActions": true,
+						"isFixedHeader": true,
+						"actions": [],
+						"activeClass": null,
+						"disabledClass": null,
+						"pastClass": null,
+						"defaultAction": null,
+						"useButtons": false
+					},
+					"rows": [],
+					"bindings": {},
+					"instances": {},
+					"devices": [],
+					"id": 2
+				}
+			],
+			"instances": {},
+			"id": 1
+		},
+		{
+			"direction": "vertical",
+			"name": "Basic Container",
+			"class": "basic-container",
+			"cells": [
+				{
+					"name": "Main Content",
+					"customId": "main",
+					"class": "basic-content",
+					"rows": [],
+					"bindings": {},
+					"instances": {},
+					"devices": [],
+					"state": {},
+					"id": 4
+				}
+			],
+			"instances": {},
+			"id": 3
+		}
+	],
+	"path": null,
+	"counter": 5,
+	"variables": [],
+	"query": [],
+	"actions": [],
+	"class": null,
+	"initial": true,
+	"menuX": 0,
+	"menuY": 0,
+	"states": [],
+	"category": "Application",
+	"slow": false,
+	"name": "skeleton"
+}

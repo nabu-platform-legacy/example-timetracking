@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataModel>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>example.databases.main.types.timetrackings</type>
+        <x>95</x>
+        <y>53</y>
+    </entries>
+    <type>DATABASE</type>
+</dataModel>

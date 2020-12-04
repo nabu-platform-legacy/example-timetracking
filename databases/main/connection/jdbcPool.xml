@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jdbcPool>
+    <driverClassName>org.h2.Driver</driverClassName>
+    <jdbcUrl>jdbc:h2:file:~/example.databases.main.connection</jdbcUrl>
+    <context>example, nabu</context>
+    <autoCommit>false</autoCommit>
+    <dialect>be.nabu.eai.module.jdbc.dialects.h2.H2Dialect</dialect>
+    <managedModels>example.databases.main.model</managedModels>
+    <managedModels>nabu.misc.auditing.types.model</managedModels>
+    <managedModels>nabu.integrations.entsoe.types.model</managedModels>
+    <managedModels>nabu.web.analysis.types.model</managedModels>
+    <managedModels>nabu.cms.mailbox.types.model</managedModels>
+    <managedModels>nabu.analytics.cep.types.model</managedModels>
+    <managedModels>nabu.cms.choice.types.model</managedModels>
+    <managedModels>nabu.testing.runner.types.model</managedModels>
+    <managedModels>nabu.cms.link.types.model</managedModels>
+    <managedModels>nabu.management.logger.types.model</managedModels>
+    <managedModels>nabu.misc.splitTesting.types.model</managedModels>
+    <managedModels>nabu.providers.notifier.database.types.model</managedModels>
+    <managedModels>nabu.cms.oauth2.types.emodel</managedModels>
+    <managedModels>nabu.cms.chat.types.model</managedModels>
+    <managedModels>nabu.integrations.ice.types.model</managedModels>
+    <managedModels>nabu.cms.humanTask.types.emodel</managedModels>
+    <managedModels>nabu.frameworks.tasks.types.model</managedModels>
+    <managedModels>nabu.cms.core.types.emodel</managedModels>
+    <managedModels>nabu.cms.attachment.types.model</managedModels>
+    <managedModels>nabu.management.report.types.model</managedModels>
+    <managedModels>nabu.frameworks.events.database.model</managedModels>
+    <managedModels>nabu.misc.workflow.types.model</managedModels>
+</jdbcPool>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection>
+    <largeIcon>database-big.png</largeIcon>
+    <mediumIcon>database-medium.png</mediumIcon>
+    <name>Databases</name>
+    <smallIcon>database-small.png</smallIcon>
+    <subType>databases</subType>
+    <type>folder</type>
+</collection>

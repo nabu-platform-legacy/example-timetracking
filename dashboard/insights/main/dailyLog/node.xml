@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.insight.InsightArtifactManager" created="2020-12-04T13:49:43.340+01:00" lastModified="2020-12-04T13:49:54.077+01:00" leaf="true" name="Daily Log" version="3">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>example.databases.main.connection</references>
+    <references>example.databases.main.types.timetrackings</references>
+</node>

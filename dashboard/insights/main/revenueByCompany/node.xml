@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.insight.InsightArtifactManager" created="2020-12-04T13:48:41.271+01:00" lastModified="2020-12-04T14:15:18.155+01:00" leaf="true" name="Revenue By Company" version="6">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>example.databases.main.connection</references>
+    <references>example.databases.main.types.timetrackings</references>
+</node>

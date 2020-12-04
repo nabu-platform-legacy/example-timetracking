@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<insight>
+    <connection>example.databases.main.connection</connection>
+    <coreType>example.databases.main.types.timetrackings</coreType>
+    <fields>
+        <aggregate>group by</aggregate>
+        <key>invoiced</key>
+    </fields>
+    <fields>
+        <aggregate>sum</aggregate>
+        <key>price</key>
+    </fields>
+</insight>

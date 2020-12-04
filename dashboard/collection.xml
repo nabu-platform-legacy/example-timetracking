@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection>
+    <largeIcon>application/application-dashboard-large.png</largeIcon>
+    <mediumIcon>application/application-dashboard-medium.png</mediumIcon>
+    <name>Dashboard</name>
+    <smallIcon>application/application-dashboard-small.png</smallIcon>
+    <subType>dashboard</subType>
+    <type>application</type>
+</collection>

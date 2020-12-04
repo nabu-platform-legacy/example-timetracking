@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection>
+    <largeIcon>insight-large.png</largeIcon>
+    <mediumIcon>insight-medium.png</mediumIcon>
+    <name>Insights</name>
+    <smallIcon>insight.png</smallIcon>
+    <type>folder</type>
+</collection>

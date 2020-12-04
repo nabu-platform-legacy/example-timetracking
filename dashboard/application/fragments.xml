@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webFragmentConfigurations>
+    <parts>
+        <configuration>
+            <property key="providers/getAllContent">nabu.web.page.cms.providers.content.getAllContent</property>
+            <property key="providers/setContent">nabu.web.page.cms.providers.content.setContent</property>
+            <property key="providers/translationProvider">nabu.web.page.cms.providers.content.translationProvider</property>
+        </configuration>
+        <environmentSpecific>false</environmentSpecific>
+        <type>nabu.web.page.core.types.configuration</type>
+    </parts>
+    <parts>
+        <configuration/>
+        <environmentSpecific>false</environmentSpecific>
+        <type>nabu.web.core.types.passwordProtect</type>
+    </parts>
+    <parts>
+        <configuration>
+            <property key="security/allowedRoles[0]">business</property>
+            <property key="security/allowedRoles[1]">admin</property>
+            <property key="caseInsensitive">true</property>
+            <property key="masterdata/preloadedCategories[0]">language</property>
+            <property key="masterdata/preloadedCategories[1]">attachmentGroup</property>
+            <property key="context[0]/type">webApplication</property>
+            <property key="context[0]/contextResolver">nabu.web.page.cms.providers.contextResolver</property>
+        </configuration>
+        <environmentSpecific>false</environmentSpecific>
+        <type>nabu.cms.core.configuration</type>
+    </parts>
+    <parts>
+        <configuration/>
+        <environmentSpecific>false</environmentSpecific>
+        <type>nabu.cms.dynamic.configuration</type>
+    </parts>
+</webFragmentConfigurations>

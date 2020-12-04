@@ -1,0 +1,374 @@
+{
+	"label": "Insights",
+	"rows": [
+		{
+			"id": 1,
+			"cells": [
+				{
+					"id": 2,
+					"rows": [],
+					"alias": "frappe-aggregate-chart",
+					"bindings": {
+						"connectionId": null,
+						"transactionId": null,
+						"limit": null,
+						"offset": null,
+						"orderBy": null,
+						"properties": null
+					},
+					"name": null,
+					"state": {
+						"autoRefresh": null,
+						"orderBy": [],
+						"filterPlaceHolder": null,
+						"filterType": "data-combo-filter",
+						"title": "Revenue By Company",
+						"limit": 1000,
+						"actions": [],
+						"filters": [],
+						"fields": [
+							{
+								"label": "%{Company Name}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "companyName"
+									}
+								]
+							},
+							{
+								"label": "%{Price}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "price"
+									}
+								]
+							}
+						],
+						"updateOperation": null,
+						"updateBindings": {},
+						"multiselect": false,
+						"styles": [],
+						"refreshOn": [],
+						"showRefresh": false,
+						"result": {
+							"companyName": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"price": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							}
+						},
+						"bindings": {},
+						"dataset": {
+							"valueFormat": {},
+							"value": "price",
+							"name": "price"
+						},
+						"labelFormat": {},
+						"operation": "example.dashboard.insights.main.revenueByCompany",
+						"comboFilter": {
+							"useTags": true
+						},
+						"type": "pie",
+						"label": "companyName"
+					},
+					"target": "page",
+					"on": null,
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": null,
+					"$$initialize": null,
+					"result": {}
+				},
+				{
+					"id": 4,
+					"rows": [],
+					"alias": "frappe-aggregate-chart",
+					"bindings": {
+						"connectionId": null,
+						"transactionId": null,
+						"limit": null,
+						"offset": null,
+						"orderBy": null,
+						"properties": null
+					},
+					"name": null,
+					"state": {
+						"autoRefresh": null,
+						"orderBy": [],
+						"filterPlaceHolder": null,
+						"filterType": "data-combo-filter",
+						"title": "Uninvoiced Amounts",
+						"limit": 1000,
+						"actions": [],
+						"filters": [],
+						"fields": [
+							{
+								"label": "%{Invoiced}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "invoiced",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Price}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "price",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							}
+						],
+						"updateOperation": null,
+						"updateBindings": {},
+						"multiselect": false,
+						"styles": [],
+						"refreshOn": [],
+						"showRefresh": false,
+						"result": {
+							"invoiced": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"price": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							}
+						},
+						"bindings": {},
+						"dataset": {
+							"valueFormat": {
+								"dateFormat": null,
+								"tag": null,
+								"html": null,
+								"javascript": null,
+								"amountOfDecimals": null
+							},
+							"value": "price",
+							"name": "price"
+						},
+						"labelFormat": {
+							"dateFormat": null,
+							"tag": null,
+							"html": null,
+							"javascript": null,
+							"amountOfDecimals": null
+						},
+						"operation": "example.dashboard.insights.main.uninvoicedAmounts",
+						"comboFilter": {
+							"useTags": true
+						},
+						"type": "donut",
+						"label": "invoiced"
+					},
+					"target": "page",
+					"on": null,
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": null,
+					"$$initialize": null,
+					"result": {}
+				}
+			],
+			"class": null,
+			"customId": null,
+			"instances": {},
+			"condition": null,
+			"direction": null,
+			"align": null,
+			"on": null,
+			"collapsed": false,
+			"name": null
+		},
+		{
+			"id": 8,
+			"cells": [
+				{
+					"id": 6,
+					"rows": [],
+					"alias": "frappe-chart",
+					"bindings": {
+						"connectionId": null,
+						"transactionId": null,
+						"limit": null,
+						"offset": null,
+						"orderBy": null,
+						"properties": null
+					},
+					"name": null,
+					"state": {
+						"autoRefresh": null,
+						"orderBy": [],
+						"filterPlaceHolder": null,
+						"filterType": "data-combo-filter",
+						"title": "Daily Log",
+						"limit": 1000,
+						"actions": [],
+						"filters": [],
+						"fields": [
+							{
+								"label": "%{Date}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "date",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Duration In Hours}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "durationInHours",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							}
+						],
+						"updateOperation": null,
+						"updateBindings": {},
+						"multiselect": false,
+						"styles": [],
+						"refreshOn": [],
+						"showRefresh": false,
+						"result": {
+							"date": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"durationInHours": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							}
+						},
+						"bindings": {},
+						"datasets": [
+							{
+								"type": "bar",
+								"valueFormat": {
+									"dateFormat": null,
+									"tag": null,
+									"html": null,
+									"javascript": null,
+									"amountOfDecimals": null
+								},
+								"value": "durationInHours",
+								"name": "durationInHours"
+							}
+						],
+						"labelFormat": {
+							"dateFormat": null,
+							"tag": null,
+							"html": null,
+							"javascript": null,
+							"amountOfDecimals": null,
+							"format": "date"
+						},
+						"operation": "example.dashboard.insights.main.dailyLog",
+						"comboFilter": {
+							"useTags": true
+						},
+						"type": "mixed",
+						"label": "date",
+						"xIsSeries": true
+					},
+					"target": "page",
+					"on": null,
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": null,
+					"$$initialize": null,
+					"result": {}
+				}
+			],
+			"class": null,
+			"customId": null,
+			"instances": {},
+			"condition": null,
+			"direction": null,
+			"align": null,
+			"on": null,
+			"collapsed": false,
+			"name": null
+		}
+	],
+	"path": "/insights",
+	"counter": 10,
+	"variables": [],
+	"query": [],
+	"actions": [],
+	"class": null,
+	"initial": false,
+	"menuX": 0,
+	"menuY": 0,
+	"states": [],
+	"category": "Application",
+	"slow": false,
+	"name": "insights"
+}

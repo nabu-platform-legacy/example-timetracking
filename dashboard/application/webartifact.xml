@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApplication>
+    <virtualHost>example.shared.host</virtualHost>
+    <path>/dashboard</path>
+    <passwordAuthenticationService>nabu.cms.core.providers.security.passwordAuthenticator</passwordAuthenticationService>
+    <secretAuthenticationService>nabu.cms.core.providers.security.secretAuthenticator</secretAuthenticationService>
+    <secretGeneratorService>nabu.cms.core.providers.security.secretGenerator</secretGeneratorService>
+    <roleService>nabu.cms.core.providers.security.roleHandler</roleService>
+    <deviceValidatorService>nabu.cms.core.providers.security.deviceValidator</deviceValidatorService>
+    <translationService>nabu.cms.core.providers.translation.translationService</translationService>
+    <supportedLanguagesService>nabu.cms.core.providers.translation.supportedLanguages</supportedLanguagesService>
+    <languageProviderService>nabu.cms.core.providers.translation.languageProvider</languageProviderService>
+    <addCacheHeaders>true</addCacheHeaders>
+    <allowJwtBearer>false</allowJwtBearer>
+    <allowContentEncoding>true</allowContentEncoding>
+    <services>example.dashboard.insights.main.revenueByCompany</services>
+    <services>example.dashboard.insights.main.uninvoicedAmounts</services>
+    <services>example.dashboard.insights.main.dailyLog</services>
+    <webFragments>example.dashboard.api</webFragments>
+    <webFragments>example.dashboard.swagger</webFragments>
+    <webFragments>nabu.web.swagger.swaggerui</webFragments>
+    <webFragments>nabu.cms.core.components.main</webFragments>
+    <webFragments>nabu.web.page.cms.initialAdministrator.component</webFragments>
+    <webFragments>nabu.web.core.passwordProtect</webFragments>
+    <webFragments>nabu.web.page.cms.component</webFragments>
+    <webFragments>nabu.cms.dynamic.component</webFragments>
+    <webFragments>nabu.web.core.components</webFragments>
+    <webFragments>nabu.web.page.core.component</webFragments>
+    <webFragments>nabu.web.page.data.component</webFragments>
+    <html5Mode>true</html5Mode>
+    <forceRequestLanguage>false</forceRequestLanguage>
+    <ignoreLanguageCookie>false</ignoreLanguageCookie>
+    <testRole>tester</testRole>
+    <testRole>editor</testRole>
+</webApplication>

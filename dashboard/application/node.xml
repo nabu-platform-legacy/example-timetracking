@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.web.application.WebApplicationManager" created="2020-12-04T13:47:58.601+01:00" lastModified="2020-12-04T13:52:54.152+01:00" leaf="true" name="Application" version="7">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>example.shared.host</references>
+    <references>nabu.cms.core.providers.security.passwordAuthenticator</references>
+    <references>nabu.cms.core.providers.security.secretAuthenticator</references>
+    <references>nabu.cms.core.providers.security.secretGenerator</references>
+    <references>nabu.cms.core.providers.security.roleHandler</references>
+    <references>nabu.cms.core.providers.security.deviceValidator</references>
+    <references>nabu.cms.core.providers.translation.translationService</references>
+    <references>nabu.cms.core.providers.translation.supportedLanguages</references>
+    <references>nabu.cms.core.providers.translation.languageProvider</references>
+    <references>example.dashboard.insights.main.revenueByCompany</references>
+    <references>example.dashboard.insights.main.uninvoicedAmounts</references>
+    <references>example.dashboard.insights.main.dailyLog</references>
+    <references>example.dashboard.api</references>
+    <references>example.dashboard.swagger</references>
+    <references>nabu.web.swagger.swaggerui</references>
+    <references>nabu.cms.core.components.main</references>
+    <references>nabu.web.page.cms.initialAdministrator.component</references>
+    <references>nabu.web.core.passwordProtect</references>
+    <references>nabu.web.page.cms.component</references>
+    <references>nabu.cms.dynamic.component</references>
+    <references>nabu.web.core.components</references>
+    <references>nabu.web.page.core.component</references>
+    <references>nabu.web.page.data.component</references>
+    <references>nabu.web.page.core.types.configuration</references>
+    <references>nabu.cms.core.configuration</references>
+</node>

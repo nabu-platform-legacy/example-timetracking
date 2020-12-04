@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<insight>
+    <connection>example.databases.main.connection</connection>
+    <coreType>example.databases.main.types.timetrackings</coreType>
+    <fields>
+        <aggregate>group by</aggregate>
+        <key>companyName</key>
+    </fields>
+    <fields>
+        <aggregate>sum</aggregate>
+        <key>price</key>
+    </fields>
+    <filters>
+        <caseInsensitive>false</caseInsensitive>
+        <key>companyName</key>
+        <operator>is not null</operator>
+        <or>false</or>
+        <input>false</input>
+    </filters>
+</insight>
