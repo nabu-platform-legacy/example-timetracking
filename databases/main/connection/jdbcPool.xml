@@ -27,4 +27,5 @@
     <managedModels>nabu.management.report.types.model</managedModels>
     <managedModels>nabu.frameworks.events.database.model</managedModels>
     <managedModels>nabu.misc.workflow.types.model</managedModels>
+    <managedTypes>example.databases.main.types.timetrackings</managedTypes>
 </jdbcPool>

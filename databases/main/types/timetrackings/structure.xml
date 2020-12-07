@@ -3,14 +3,14 @@
     <field label="Date" name="date" type="java.util.Date"/>
     <field label="Start" minOccurs="0" name="start" type="java.lang.String"/>
     <field label="End" minOccurs="0" name="end" type="java.lang.String"/>
-    <field label="Duration (in minutes)" name="durationInMinutes" type="java.lang.Double"/>
+    <field label="Duration (in minutes)" minOccurs="0" name="durationInMinutes" type="java.lang.Double"/>
     <field label="Duration (in hours)" name="durationInHours" type="java.lang.Double"/>
     <field label="User" name="user" type="java.lang.String"/>
-    <field label="Team" name="team" type="java.lang.String"/>
+    <field label="Team" minOccurs="0" name="team" type="java.lang.String"/>
     <field label="Price" name="price" type="java.lang.Double"/>
-    <field label="Type" name="type" type="java.lang.String"/>
+    <field label="Type" minOccurs="0" name="type" type="java.lang.String"/>
     <field label="Company name" minOccurs="0" name="companyName" type="java.lang.String"/>
     <field label="Contact name" minOccurs="0" name="contactName" type="java.lang.String"/>
-    <field label="Invoiceable" name="invoiceable" type="java.lang.String"/>
-    <field label="Invoiced" name="invoiced" type="java.lang.String"/>
+    <field label="Invoiceable" minOccurs="0" name="invoiceable" type="java.lang.String"/>
+    <field label="Invoiced" minOccurs="0" name="invoiced" type="java.lang.String"/>
 </structure>

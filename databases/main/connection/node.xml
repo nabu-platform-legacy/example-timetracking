@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.jdbc.pool.JDBCPoolManager" created="2020-12-03T14:41:11.364+01:00" lastModified="2020-12-03T14:41:11.364+01:00" leaf="true" name="Connection" version="2">
+<node artifactManager="be.nabu.eai.module.jdbc.pool.JDBCPoolManager" created="2020-12-03T14:41:11.364+01:00" lastModified="2020-12-07T15:06:41.232+01:00" leaf="true" name="Connection" version="3">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>
@@ -25,4 +25,5 @@
     <references>nabu.management.report.types.model</references>
     <references>nabu.frameworks.events.database.model</references>
     <references>nabu.misc.workflow.types.model</references>
+    <references>example.databases.main.types.timetrackings</references>
 </node>

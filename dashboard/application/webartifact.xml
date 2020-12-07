@@ -28,6 +28,9 @@
     <webFragments>nabu.web.core.components</webFragments>
     <webFragments>nabu.web.page.core.component</webFragments>
     <webFragments>nabu.web.page.data.component</webFragments>
+    <webFragments>example.dashboard.interactions.main.timetrackings.services.list</webFragments>
+    <webFragments>example.dashboard.interactions.main.timetrackings.services.create</webFragments>
+    <webFragments>example.dashboard.interactions.main.timetrackings.services.update</webFragments>
     <html5Mode>true</html5Mode>
     <forceRequestLanguage>false</forceRequestLanguage>
     <ignoreLanguageCookie>false</ignoreLanguageCookie>

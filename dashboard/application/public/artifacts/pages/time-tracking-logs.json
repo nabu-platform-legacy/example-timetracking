@@ -1,0 +1,603 @@
+{
+	"label": "Time Tracking Logs",
+	"rows": [
+		{
+			"id": 1,
+			"cells": [
+				{
+					"id": 2,
+					"rows": [],
+					"alias": "data-table-list",
+					"bindings": {
+						"limit": null,
+						"offset": null,
+						"orderBy": null,
+						"user": null,
+						"companyName": null,
+						"properties": null
+					},
+					"name": null,
+					"state": {
+						"autoRefresh": null,
+						"orderBy": [
+							"date desc"
+						],
+						"filterPlaceHolder": null,
+						"filterType": "data-combo-filter",
+						"title": "Timetrackings",
+						"limit": 10,
+						"actions": [
+							{
+								"name": "createTimetrackings",
+								"global": true,
+								"label": "%{Create}",
+								"type": "button",
+								"class": "primary"
+							},
+							{
+								"name": "updateTimetrackings",
+								"global": false,
+								"icon": "fa-pencil-alt",
+								"type": "button",
+								"class": "inline"
+							},
+							{
+								"name": "downloadAsExcel",
+								"icon": null,
+								"class": null,
+								"label": "Download",
+								"condition": null,
+								"refresh": false,
+								"global": true,
+								"close": false,
+								"type": "button",
+								"useSelection": false
+							}
+						],
+						"filters": [],
+						"fields": [
+							{
+								"label": "%{User}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "user",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Company Name}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "companyName",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Date}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "date",
+										"content": null,
+										"format": "date",
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {},
+										"dateFormat": "'yy MMM dd",
+										"tag": null,
+										"html": null,
+										"amountOfDecimals": null
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Duration In Hours}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "durationInHours",
+										"content": null,
+										"format": "number",
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {},
+										"dateFormat": null,
+										"tag": null,
+										"html": null,
+										"amountOfDecimals": null
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Invoiced}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "invoiced",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Price}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "price",
+										"content": null,
+										"format": "number",
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {},
+										"dateFormat": null,
+										"tag": null,
+										"html": null,
+										"amountOfDecimals": null
+									}
+								],
+								"styles": [],
+								"hidden": null
+							}
+						],
+						"updateOperation": "example.dashboard.interactions.main.timetrackings.services.update",
+						"updateBindings": {
+							"id": null,
+							"body": null
+						},
+						"multiselect": false,
+						"styles": [],
+						"refreshOn": [
+							"createdTimetrackings"
+						],
+						"showRefresh": false,
+						"result": {
+							"companyName": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"contactName": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"date": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"durationInHours": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"durationInMinutes": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"id": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"invoiceable": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"invoiced": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"price": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"team": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"type": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"user": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							}
+						},
+						"operation": "example.dashboard.interactions.main.timetrackings.services.list",
+						"comboFilter": {
+							"useTags": true
+						},
+						"useNativeTable": true,
+						"downloadOn": [
+							{
+								"event": "downloadAsExcel",
+								"contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+								"limit": "0",
+								"fileName": "timetrackings.xlsx"
+							}
+						]
+					},
+					"target": "page",
+					"on": null,
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": {
+						"eventFields": [],
+						"name": null
+					},
+					"$$initialize": null,
+					"result": {}
+				}
+			],
+			"class": null,
+			"customId": null,
+			"instances": {},
+			"condition": null,
+			"direction": null,
+			"align": null,
+			"on": null,
+			"collapsed": false,
+			"name": null
+		},
+		{
+			"id": 5,
+			"cells": [
+				{
+					"id": 6,
+					"rows": [],
+					"alias": "page-form",
+					"bindings": {
+						"body.date": null,
+						"body.durationInHours": null,
+						"body.user": null,
+						"body.price": null,
+						"body.companyName": null
+					},
+					"name": null,
+					"state": {
+						"title": "%{Create Timetrackings}",
+						"immediate": false,
+						"pages": [
+							{
+								"name": "Form Fields",
+								"title": null,
+								"fields": [
+									{
+										"arbitrary": false,
+										"name": "body.user",
+										"label": "%{User}",
+										"description": null,
+										"type": "enumeration-operation",
+										"enumerations": [],
+										"value": null,
+										"group": null,
+										"joinGroup": false,
+										"textType": null,
+										"bindings": {},
+										"validationSuccessEvent": {
+											"eventFields": [],
+											"name": null
+										},
+										"enumerationProvider": null,
+										"enumerationOperation": "example.dashboard.insights.main.employeeListing",
+										"enumerationOperationLabel": "user",
+										"enumerationOperationValue": "user",
+										"enumerationOperationQuery": null,
+										"enumerationOperationBinding": {}
+									},
+									{
+										"arbitrary": false,
+										"name": "body.companyName",
+										"label": "%{Company Name}",
+										"description": null,
+										"type": "text",
+										"enumerations": [],
+										"value": null,
+										"group": null,
+										"joinGroup": false
+									},
+									{
+										"arbitrary": false,
+										"name": "body.date",
+										"label": "%{Date}",
+										"description": null,
+										"type": "date",
+										"enumerations": [],
+										"value": null,
+										"group": null,
+										"joinGroup": false
+									},
+									{
+										"arbitrary": false,
+										"name": "body.durationInHours",
+										"label": "%{Duration In Hours}",
+										"description": null,
+										"type": "text",
+										"enumerations": [],
+										"value": null,
+										"group": null,
+										"joinGroup": false
+									},
+									{
+										"arbitrary": false,
+										"name": "body.price",
+										"label": "%{Price}",
+										"description": null,
+										"type": "text",
+										"enumerations": [],
+										"value": null,
+										"group": null,
+										"joinGroup": false
+									}
+								]
+							}
+						],
+						"class": null,
+						"ok": "Ok",
+						"edit": "Edit",
+						"next": "Next",
+						"cancel": "Cancel",
+						"event": "createdTimetrackings",
+						"synchronize": false,
+						"operation": "example.dashboard.interactions.main.timetrackings.services.create"
+					},
+					"target": "prompt",
+					"on": "createTimetrackings",
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": {
+						"eventFields": [],
+						"name": null
+					},
+					"$$initialize": null,
+					"cellState": {
+						"form": {
+							"properties": {
+								"body": {
+									"type": "object",
+									"required": [
+										"date",
+										"durationInHours",
+										"user",
+										"price"
+									],
+									"properties": {
+										"date": {
+											"type": "string",
+											"format": "date-time"
+										},
+										"durationInHours": {
+											"type": "number",
+											"format": "double"
+										},
+										"user": {
+											"type": "string"
+										},
+										"price": {
+											"type": "number",
+											"format": "double"
+										},
+										"companyName": {
+											"type": "string"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			],
+			"class": null,
+			"customId": null,
+			"instances": {},
+			"condition": null,
+			"direction": null,
+			"align": null,
+			"on": null,
+			"collapsed": false,
+			"name": null
+		},
+		{
+			"id": 7,
+			"cells": [
+				{
+					"id": 8,
+					"rows": [],
+					"alias": "page-form",
+					"bindings": {
+						"id": "updateTimetrackings.id",
+						"body.date": "updateTimetrackings.date",
+						"body.durationInHours": "updateTimetrackings.durationInHours",
+						"body.price": "updateTimetrackings.price"
+					},
+					"name": null,
+					"state": {
+						"title": "%{Update Timetrackings}",
+						"immediate": false,
+						"pages": [
+							{
+								"name": "Form Fields",
+								"title": null,
+								"fields": [
+									{
+										"arbitrary": false,
+										"name": "body.date",
+										"label": "%{Date}",
+										"description": null,
+										"type": "date",
+										"enumerations": [],
+										"value": null,
+										"group": null,
+										"joinGroup": false
+									},
+									{
+										"arbitrary": false,
+										"name": "body.durationInHours",
+										"label": "%{Duration In Hours}",
+										"description": null,
+										"type": "text",
+										"enumerations": [],
+										"value": null,
+										"group": null,
+										"joinGroup": false
+									},
+									{
+										"arbitrary": false,
+										"name": "body.price",
+										"label": "%{Price}",
+										"description": null,
+										"type": "text",
+										"enumerations": [],
+										"value": null,
+										"group": null,
+										"joinGroup": false
+									}
+								]
+							}
+						],
+						"class": null,
+						"ok": "Ok",
+						"edit": "Edit",
+						"next": "Next",
+						"cancel": "Cancel",
+						"event": "updatedTimetrackings",
+						"synchronize": true,
+						"operation": "example.dashboard.interactions.main.timetrackings.services.update"
+					},
+					"target": "prompt",
+					"on": "updateTimetrackings",
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": null,
+					"$$initialize": null,
+					"cellState": {
+						"form": {
+							"properties": {
+								"id": {
+									"in": "path",
+									"required": true,
+									"name": "id",
+									"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}",
+									"type": "string",
+									"format": "uuid"
+								},
+								"body": {
+									"type": "object",
+									"required": [
+										"date",
+										"durationInHours",
+										"price"
+									],
+									"properties": {
+										"date": {
+											"type": "string",
+											"format": "date-time"
+										},
+										"durationInHours": {
+											"type": "number",
+											"format": "double"
+										},
+										"price": {
+											"type": "number",
+											"format": "double"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			],
+			"class": null,
+			"customId": null,
+			"instances": {},
+			"condition": null,
+			"direction": null,
+			"align": null,
+			"on": null,
+			"collapsed": false,
+			"name": null
+		}
+	],
+	"path": "/logs",
+	"counter": 9,
+	"variables": [],
+	"query": [],
+	"actions": [],
+	"class": null,
+	"initial": false,
+	"menuX": 0,
+	"menuY": 0,
+	"states": [],
+	"category": "Application",
+	"slow": false,
+	"name": "time-tracking-logs"
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<crud>
+    <allowHeaderAsQueryParameter>true</allowHeaderAsQueryParameter>
+    <changeTracker>nabu.cms.core.providers.misc.changeTracker</changeTracker>
+    <connection>example.databases.main.connection</connection>
+    <coreType>example.databases.main.types.timetrackings</coreType>
+    <createBlacklistFields>end</createBlacklistFields>
+    <createBlacklistFields>start</createBlacklistFields>
+    <createBlacklistFields>invoiceable</createBlacklistFields>
+    <createBlacklistFields>invoiced</createBlacklistFields>
+    <createBlacklistFields>durationInMinutes</createBlacklistFields>
+    <createBlacklistFields>contactName</createBlacklistFields>
+    <createBlacklistFields>team</createBlacklistFields>
+    <createBlacklistFields>type</createBlacklistFields>
+    <filters>
+        <caseInsensitive>false</caseInsensitive>
+        <key>user</key>
+        <operator>ilike</operator>
+        <or>false</or>
+        <input>true</input>
+    </filters>
+    <filters>
+        <caseInsensitive>false</caseInsensitive>
+        <key>companyName</key>
+        <operator>ilike</operator>
+        <or>false</or>
+        <input>true</input>
+    </filters>
+    <listBlacklistFields>start</listBlacklistFields>
+    <listBlacklistFields>end</listBlacklistFields>
+    <provider>nabu.services.crud.provider.basic.provider</provider>
+    <updateBlacklistFields>contactName</updateBlacklistFields>
+    <updateBlacklistFields>durationInMinutes</updateBlacklistFields>
+    <updateBlacklistFields>start</updateBlacklistFields>
+    <updateBlacklistFields>type</updateBlacklistFields>
+    <updateBlacklistFields>team</updateBlacklistFields>
+    <updateBlacklistFields>invoiceable</updateBlacklistFields>
+    <updateBlacklistFields>invoiced</updateBlacklistFields>
+    <updateBlacklistFields>end</updateBlacklistFields>
+    <updateBlacklistFields>companyName</updateBlacklistFields>
+    <updateBlacklistFields>user</updateBlacklistFields>
+    <useExplicitLanguage>false</useExplicitLanguage>
+    <useLanguage>false</useLanguage>
+</crud>

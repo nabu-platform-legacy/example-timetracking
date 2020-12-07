@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection>
+    <largeIcon>crud-big.png</largeIcon>
+    <mediumIcon>crud-medium.png</mediumIcon>
+    <name>Main</name>
+    <subType>crud</subType>
+    <type>folder</type>
+</collection>

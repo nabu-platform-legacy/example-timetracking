@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.web.application.WebApplicationManager" created="2020-12-04T13:47:58.601+01:00" lastModified="2020-12-07T10:34:01.922+01:00" leaf="true" name="Application" version="14">
+<node artifactManager="be.nabu.eai.module.web.application.WebApplicationManager" created="2020-12-04T13:47:58.601+01:00" lastModified="2020-12-07T15:54:28.322+01:00" leaf="true" name="Application" version="17">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>
@@ -27,6 +27,9 @@
     <references>nabu.web.core.components</references>
     <references>nabu.web.page.core.component</references>
     <references>nabu.web.page.data.component</references>
+    <references>example.dashboard.interactions.main.timetrackings.services.list</references>
+    <references>example.dashboard.interactions.main.timetrackings.services.create</references>
+    <references>example.dashboard.interactions.main.timetrackings.services.update</references>
     <references>nabu.web.page.core.types.configuration</references>
     <references>nabu.web.core.types.passwordProtect</references>
     <references>nabu.cms.core.configuration</references>

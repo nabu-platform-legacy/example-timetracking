@@ -24,3 +24,23 @@
 		margin-top: 0;
 	}
 }
+
+.n-input-date {
+	.n-input-date-available {
+		.n-input-date-label {
+			text-decoration: none;
+			display: block;
+		}
+		&:hover {
+			background-color: $color-neutral-lighter;
+		}
+		&:not(.n-input-date-today):not(.n-input-date-selected) {
+			.n-input-date-label {	
+				color: $color-primary-darker;
+				&:hover {
+					color: $color-primary-darkest;
+				}
+			}
+		}
+	}
+}

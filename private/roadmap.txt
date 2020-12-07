@@ -1,6 +1,11 @@
 - add interaction: crud to log custom time trackings
 	- remove a lot of the input fields? especially the optional ones...
 
+- finishing touches:
+	- mobile friendly
+	- translations
+
+
 - add API so other systems can extract and log data (expose the CRUD?)
 
 - build a swagger client that consumes the API and uses it to remotely add data
