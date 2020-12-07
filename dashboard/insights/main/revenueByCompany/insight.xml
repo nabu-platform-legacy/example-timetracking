@@ -17,4 +17,11 @@
         <or>false</or>
         <input>false</input>
     </filters>
+    <filters>
+        <caseInsensitive>false</caseInsensitive>
+        <key>user</key>
+        <operator>ilike</operator>
+        <or>false</or>
+        <input>true</input>
+    </filters>
 </insight>

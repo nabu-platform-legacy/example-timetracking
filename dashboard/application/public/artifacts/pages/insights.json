@@ -2,6 +2,41 @@
 	"label": "Insights",
 	"rows": [
 		{
+			"id": 14,
+			"cells": [
+				{
+					"id": 15,
+					"rows": [],
+					"alias": "page-richtext",
+					"bindings": {},
+					"name": null,
+					"state": {
+						"content": "<h1>&nbsp;{{$value(\"page.employee\")}}</h1>",
+						"compile": true
+					},
+					"target": "page",
+					"on": null,
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": null
+				}
+			],
+			"class": "blank",
+			"customId": null,
+			"instances": {},
+			"condition": "$value(\"page.employee\")",
+			"direction": null,
+			"align": null,
+			"on": null,
+			"collapsed": false,
+			"name": null
+		},
+		{
 			"id": 1,
 			"cells": [
 				{
@@ -14,7 +49,8 @@
 						"limit": null,
 						"offset": null,
 						"orderBy": null,
-						"properties": null
+						"properties": null,
+						"filter:user": "page.employee"
 					},
 					"name": null,
 					"state": {
@@ -32,18 +68,34 @@
 								"fragments": [
 									{
 										"type": "data",
-										"key": "companyName"
+										"key": "companyName",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
 									}
-								]
+								],
+								"styles": [],
+								"hidden": null
 							},
 							{
 								"label": "%{Price}",
 								"fragments": [
 									{
 										"type": "data",
-										"key": "price"
+										"key": "price",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
 									}
-								]
+								],
+								"styles": [],
+								"hidden": null
 							}
 						],
 						"updateOperation": null,
@@ -103,7 +155,8 @@
 						"limit": null,
 						"offset": null,
 						"orderBy": null,
-						"properties": null
+						"properties": null,
+						"filter:user": "page.employee"
 					},
 					"name": null,
 					"state": {
@@ -234,7 +287,8 @@
 						"limit": null,
 						"offset": null,
 						"orderBy": null,
-						"properties": null
+						"properties": null,
+						"filter:user": "page.employee"
 					},
 					"name": null,
 					"state": {
@@ -359,9 +413,11 @@
 		}
 	],
 	"path": "/insights",
-	"counter": 10,
+	"counter": 16,
 	"variables": [],
-	"query": [],
+	"query": [
+		"employee"
+	],
 	"actions": [],
 	"class": null,
 	"initial": false,
@@ -370,5 +426,6 @@
 	"states": [],
 	"category": "Application",
 	"slow": false,
-	"name": "insights"
+	"name": "insights",
+	"parameters": []
 }

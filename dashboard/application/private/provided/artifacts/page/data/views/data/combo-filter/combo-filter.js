@@ -55,6 +55,7 @@ Vue.component("data-combo-filter", {
 		}
 	},
 	created: function() {
+		console.log("doing the combo!");
 		this.activeFilter = this.filters[0];
 	},
 	methods: {

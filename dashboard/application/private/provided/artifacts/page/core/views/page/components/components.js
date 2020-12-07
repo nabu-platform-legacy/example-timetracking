@@ -98,13 +98,10 @@ Vue.component("page-components-overview", {
 			this.$services.page.setDragData(event, "operation", operation.id);
 		},
 		prettyPrintOperation: function(id) {
-			return id.replace(/.*\.([^.]+)\.([^.]+)$/, "$1.$2");
+			return this.$services.page.prettify(id.replace(/.*\.([^.]+)\.([^.]+)$/, "$2"));
 		},
 		operationFolder: function(id) {
-			var pretty = this.prettyPrintOperation(id);
-			if (id.length > pretty.length) {
-				return id.substring(0, id.length - pretty.length - 1);
-			}
+			return id.replace(/(.*)\.[^.]+$/, "$1");
 		},
 		getTemplateCategory: function(category) {
 			return this.$services.page.templates.filter(function(x) {

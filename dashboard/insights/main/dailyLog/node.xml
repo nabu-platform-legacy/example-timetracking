@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.insight.InsightArtifactManager" created="2020-12-04T13:49:43.340+01:00" lastModified="2020-12-04T13:49:54.077+01:00" leaf="true" name="Daily Log" version="3">
+<node artifactManager="be.nabu.eai.module.services.insight.InsightArtifactManager" created="2020-12-04T13:49:43.340+01:00" lastModified="2020-12-07T10:35:24.254+01:00" leaf="true" name="Daily Log" version="4">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>

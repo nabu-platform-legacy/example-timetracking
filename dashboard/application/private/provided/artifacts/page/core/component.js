@@ -54,7 +54,8 @@ window.addEventListener("load", function() {
 		$services.router.register({
 			alias: "page-richtext",
 			enter: function(parameters) {
-				return new nabu.page.views.Richtext({propsData: parameters});
+				var component = Vue.component("page-richtext");
+				return new component({propsData: parameters});
 			},
 			icon: "page/core/images/richtext.svg",
 			description: "The rich text component can be used to write static texts with markup",

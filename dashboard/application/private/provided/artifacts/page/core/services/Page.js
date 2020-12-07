@@ -1299,7 +1299,7 @@ nabu.services.VueService(Vue.extend({
 				return true;
 			}
 			var result = this.eval(condition, state, instance);
-			return result == true;
+			return !!result;
 		},
 		getPageState: function(pageInstance) {
 			var state = {};
@@ -1387,6 +1387,7 @@ nabu.services.VueService(Vue.extend({
 					}
 					return null;
 				}
+				console.log("result is", result);
 				if (result instanceof Function) {
 					// by default it is bound to "undefined"
 					result = result.bind(this);

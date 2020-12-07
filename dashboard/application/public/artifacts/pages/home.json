@@ -1,0 +1,254 @@
+{
+	"label": "Home",
+	"rows": [
+		{
+			"id": 1,
+			"cells": [
+				{
+					"id": 2,
+					"rows": [],
+					"alias": "page-richtext",
+					"bindings": {},
+					"name": null,
+					"state": {
+						"content": "<h1>Time Tracking</h1><div>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.&nbsp;</div><div><br></div><div>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.&nbsp;<br></div>"
+					},
+					"target": "page",
+					"on": null,
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": null
+				},
+				{
+					"id": 3,
+					"rows": [],
+					"alias": "page-static-image",
+					"bindings": {},
+					"name": null,
+					"state": {
+						"href": "resources/images/example-image.png",
+						"title": null,
+						"height": "15rem",
+						"size": "cover",
+						"imagePath": "images"
+					},
+					"target": "page",
+					"on": null,
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": null
+				}
+			],
+			"class": "content-row",
+			"customId": null,
+			"instances": {},
+			"condition": null,
+			"direction": null,
+			"align": null,
+			"on": null,
+			"collapsed": false,
+			"name": null
+		},
+		{
+			"id": 6,
+			"cells": [
+				{
+					"id": 7,
+					"rows": [],
+					"alias": "data-table-list",
+					"bindings": {
+						"connectionId": null,
+						"transactionId": null,
+						"limit": null,
+						"offset": null,
+						"orderBy": null,
+						"properties": null
+					},
+					"name": null,
+					"state": {
+						"autoRefresh": null,
+						"orderBy": [
+							"user"
+						],
+						"filterPlaceHolder": null,
+						"filterType": "data-combo-filter",
+						"title": "Employee Listing",
+						"limit": 10,
+						"actions": [
+							{
+								"name": "viewEmployeeInsights",
+								"icon": "fa-chevron-right",
+								"class": null,
+								"label": null,
+								"condition": null,
+								"refresh": false,
+								"global": false,
+								"close": false,
+								"type": "button",
+								"useSelection": false
+							}
+						],
+						"filters": [],
+						"fields": [
+							{
+								"label": "%{User}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "user",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Earned}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "earned",
+										"content": null,
+										"format": "number",
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {},
+										"dateFormat": null,
+										"tag": null,
+										"html": null,
+										"amountOfDecimals": null
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Worked}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "worked",
+										"content": null,
+										"format": "number",
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {},
+										"dateFormat": null,
+										"tag": null,
+										"html": null,
+										"amountOfDecimals": "1"
+									}
+								],
+								"styles": [],
+								"hidden": null
+							}
+						],
+						"updateOperation": null,
+						"updateBindings": {},
+						"multiselect": false,
+						"styles": [],
+						"refreshOn": [],
+						"showRefresh": false,
+						"result": {
+							"earned": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"user": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"worked": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							}
+						},
+						"operation": "example.dashboard.insights.main.employeeListing",
+						"comboFilter": {
+							"useTags": true
+						},
+						"useNativeTable": true
+					},
+					"target": "page",
+					"on": null,
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": {
+						"eventFields": [],
+						"name": null
+					},
+					"$$initialize": null,
+					"result": {}
+				}
+			],
+			"class": null,
+			"customId": null,
+			"instances": {},
+			"condition": null,
+			"direction": null,
+			"align": null,
+			"on": null,
+			"collapsed": false,
+			"name": null
+		}
+	],
+	"path": "/",
+	"counter": 8,
+	"variables": [],
+	"query": [],
+	"actions": [
+		{
+			"name": "redirect to insights",
+			"on": "viewEmployeeInsights",
+			"confirmation": null,
+			"operation": null,
+			"route": "insights",
+			"event": null,
+			"anchor": null,
+			"bindings": {
+				"employee": "viewEmployeeInsights.user"
+			},
+			"expandBindings": true,
+			"chainEvent": {
+				"eventFields": [],
+				"name": null
+			}
+		}
+	],
+	"class": null,
+	"initial": false,
+	"menuX": 0,
+	"menuY": 0,
+	"states": [],
+	"category": "Application",
+	"slow": false,
+	"name": "home"
+}

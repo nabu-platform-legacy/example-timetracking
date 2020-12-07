@@ -4,17 +4,16 @@
     <coreType>example.databases.main.types.timetrackings</coreType>
     <fields>
         <aggregate>group by</aggregate>
-        <key>date</key>
+        <key>user</key>
     </fields>
     <fields>
         <aggregate>sum</aggregate>
+        <alias>Earned</alias>
+        <key>price</key>
+    </fields>
+    <fields>
+        <aggregate>sum</aggregate>
+        <alias>Worked</alias>
         <key>durationInHours</key>
     </fields>
-    <filters>
-        <caseInsensitive>false</caseInsensitive>
-        <key>user</key>
-        <operator>ilike</operator>
-        <or>false</or>
-        <input>true</input>
-    </filters>
 </insight>

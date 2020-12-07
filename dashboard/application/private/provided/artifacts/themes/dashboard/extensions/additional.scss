@@ -2,7 +2,9 @@
 	margin: 0 1rem;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	background-color: white;
-	
+}
+
+.page-row.content-row, .page-row.blank {
 	.page-cell {
 		margin: 0 !important;
 		padding: 0 !important;

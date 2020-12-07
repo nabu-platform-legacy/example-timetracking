@@ -10,4 +10,11 @@
         <aggregate>sum</aggregate>
         <key>price</key>
     </fields>
+    <filters>
+        <caseInsensitive>false</caseInsensitive>
+        <key>user</key>
+        <operator>ilike</operator>
+        <or>false</or>
+        <input>true</input>
+    </filters>
 </insight>

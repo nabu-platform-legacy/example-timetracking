@@ -16,6 +16,7 @@
     <services>example.dashboard.insights.main.revenueByCompany</services>
     <services>example.dashboard.insights.main.uninvoicedAmounts</services>
     <services>example.dashboard.insights.main.dailyLog</services>
+    <services>example.dashboard.insights.main.employeeListing</services>
     <webFragments>example.dashboard.api</webFragments>
     <webFragments>example.dashboard.swagger</webFragments>
     <webFragments>nabu.web.swagger.swaggerui</webFragments>

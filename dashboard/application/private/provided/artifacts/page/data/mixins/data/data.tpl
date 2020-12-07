@@ -45,7 +45,8 @@
 			</n-collapsible>
 			<n-collapsible title="Filters" v-if="cell.state.filters.length || filtersToAdd().length">
 				<div class="padded-content">
-					<n-form-combo label="Filter Type" :filter="function(value) { return $window.nabu.page.providers('data-filter') }" v-model="cell.state.filterType"
+					<n-form-combo label="Filter Type" :filter="function(value) { return $window.nabu.page.providers('data-filter') }" 
+						v-model="cell.state.filterType"
 						:extracter="function(x) { return x.component }"
 						:formatter="function(x) { return x.name }"/>
 						
@@ -423,7 +424,7 @@
 
 <template id="data-common-filter">
 	<component v-if="cell.state.filterType" 
-		:is="cell.state.filterType.component" 
+		:is="cell.state.filterType.component ? cell.state.filterType.component : cell.state.filterType" 
 		class="cell-actions"
 		:page="page"
 		:cell="cell"
