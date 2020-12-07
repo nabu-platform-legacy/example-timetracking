@@ -2215,6 +2215,11 @@ nabu.page.views.PageRows = Vue.component("n-page-rows", {
 		});
 	},
 	methods: {
+		suggesPageRowClasses: function(value) {
+			return this.$services.page.classes("page-row", value).filter(function(x) {
+				return ["empty", "hover-top", "hover-bottom", "hover-left", "hover-right", "hovering"].indexOf(x) < 0;
+			});
+		},
 		drop: function(event, row) {
 			var self = this;
 			var data = this.$services.page.getDragData(event, "component-alias");

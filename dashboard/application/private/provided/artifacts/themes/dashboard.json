@@ -29,6 +29,11 @@
 					"url": "templates/layouts/menu-top.png"
 				}
 			}
+		},
+		"extensions": {
+			"additional.scss": {
+				"url": "additional.scss"
+			}
 		}
 	}
 }
