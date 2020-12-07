@@ -1,0 +1,24 @@
+.page-row.content-row {
+	margin: 0 1rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	background-color: white;
+	
+	.page-cell {
+		margin: 0 !important;
+		padding: 0 !important;
+		background: none !important;
+		border: none !important;
+		box-shadow: none !important;
+	}
+	
+	.page-richtext {
+		padding: 2rem;
+	}
+	
+	/* we want to decouple from content above (e.G. menu, table,...) */
+	margin-top: 1rem;
+	/* but if you chain multiple together, we want them to be seamless */
+	+ .page-row.content-row {
+		margin-top: 0;
+	}
+}
