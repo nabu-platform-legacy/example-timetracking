@@ -1,0 +1,376 @@
+{
+	"label": "Remote Insights",
+	"rows": [
+		{
+			"id": 1,
+			"cells": [
+				{
+					"id": 2,
+					"rows": [],
+					"alias": "frappe-aggregate-chart",
+					"bindings": {
+						"parameters:limit": null,
+						"parameters:offset": null,
+						"parameters:orderBy": null,
+						"parameters:filterUser": null,
+						"properties": null
+					},
+					"name": null,
+					"state": {
+						"autoRefresh": null,
+						"orderBy": [],
+						"filterPlaceHolder": null,
+						"filterType": "data-combo-filter",
+						"title": "Get Example Dashboard Insights Main Revenue By Company",
+						"limit": 1000,
+						"actions": [],
+						"filters": [],
+						"fields": [
+							{
+								"label": "%{Company Name}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "companyName"
+									}
+								]
+							},
+							{
+								"label": "%{Price}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "price"
+									}
+								]
+							}
+						],
+						"updateOperation": null,
+						"updateBindings": {},
+						"multiselect": false,
+						"styles": [],
+						"refreshOn": [],
+						"showRefresh": false,
+						"result": {
+							"companyName": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"price": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							}
+						},
+						"bindings": {},
+						"dataset": {
+							"valueFormat": {},
+							"value": "price",
+							"name": "price"
+						},
+						"labelFormat": {},
+						"operation": "example.connectors.timetracking.swagger.services.getExampleDashboardInsightsMainRevenueByCompany",
+						"comboFilter": {
+							"useTags": true
+						},
+						"type": "pie",
+						"label": "companyName"
+					},
+					"target": "page",
+					"on": null,
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": null,
+					"$$initialize": null,
+					"result": {}
+				}
+			],
+			"class": null,
+			"customId": null,
+			"instances": {},
+			"condition": null,
+			"direction": null,
+			"align": null,
+			"on": null,
+			"collapsed": false,
+			"name": null
+		},
+		{
+			"id": 3,
+			"cells": [
+				{
+					"id": 4,
+					"rows": [],
+					"alias": "data-table-list",
+					"bindings": {
+						"parameters:limit": null,
+						"parameters:offset": null,
+						"parameters:orderBy": null,
+						"parameters:user": null,
+						"parameters:companyName": null,
+						"properties": null
+					},
+					"name": null,
+					"state": {
+						"autoRefresh": null,
+						"orderBy": [],
+						"filterPlaceHolder": null,
+						"filterType": "data-combo-filter",
+						"title": "Get Timetrackings",
+						"limit": 10,
+						"actions": [],
+						"filters": [],
+						"fields": [
+							{
+								"label": "%{User}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "user",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Company Name}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "companyName",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Date}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "date",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Duration In Hours}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "durationInHours",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Invoiced}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "invoiced",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Price}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "price",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							},
+							{
+								"label": "%{Team}",
+								"fragments": [
+									{
+										"type": "data",
+										"key": "team",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"form": {}
+									}
+								],
+								"styles": [],
+								"hidden": null
+							}
+						],
+						"updateOperation": null,
+						"updateBindings": {},
+						"multiselect": false,
+						"styles": [],
+						"refreshOn": [],
+						"showRefresh": false,
+						"result": {
+							"companyName": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"contactName": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"date": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"durationInHours": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"durationInMinutes": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"id": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"invoiceable": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"invoiced": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"price": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"team": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"type": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"user": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							}
+						},
+						"operation": "example.connectors.timetracking.swagger.services.getTimetrackings",
+						"comboFilter": {
+							"useTags": true
+						},
+						"useNativeTable": true
+					},
+					"target": "page",
+					"on": null,
+					"class": null,
+					"customId": null,
+					"width": 1,
+					"height": null,
+					"instances": {},
+					"condition": null,
+					"devices": [],
+					"clickEvent": null,
+					"$$initialize": null,
+					"result": {}
+				}
+			],
+			"class": null,
+			"customId": null,
+			"instances": {},
+			"condition": null,
+			"direction": null,
+			"align": null,
+			"on": null,
+			"collapsed": false,
+			"name": null
+		}
+	],
+	"path": "/remote",
+	"counter": 5,
+	"variables": [],
+	"query": [],
+	"actions": [],
+	"class": null,
+	"initial": false,
+	"menuX": 0,
+	"menuY": 0,
+	"states": [],
+	"category": "Application",
+	"slow": false,
+	"name": "remote-insights"
+}

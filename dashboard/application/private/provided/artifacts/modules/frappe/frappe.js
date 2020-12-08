@@ -472,22 +472,20 @@ window.addEventListener("load", function () {
 				'records': function() {
 					this.draw();	
 				},
-				'cell.state.operation': function(newValue) {
-					if (newValue) {
+				definition: function(definition) {
+					if (definition) {
 						if (!this.cell.state.type) {
 							this.cell.state.type = "pie";
 						}
 						var self = this;
 						// we set the label value for each field
 						if (!this.cell.state.label) {
-							var definition = this.$services.data.getDefinition(this.cell.state.operation);
 							Object.keys(definition).forEach(function(key) {
 								if (!self.cell.state.label && (definition[key].type == "string" || !definition[key].type)) {
 									self.cell.state.label = key;
 								}
 							});
 						}
-						var definition = this.$services.data.getDefinition(this.cell.state.operation);
 						Object.keys(definition).forEach(function(key) {
 							if (definition[key].type == "number" || definition[key].format == "int32" || definition[key].format == "int64" || !definition[key].type) {
 								var dataset = self.cell.state.dataset;

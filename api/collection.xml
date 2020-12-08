@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection>
+    <largeIcon>application/api-large.png</largeIcon>
+    <mediumIcon>application/api-medium.png</mediumIcon>
+    <name>API</name>
+    <smallIcon>application/api-small.png</smallIcon>
+    <subType>api</subType>
+    <type>application</type>
+</collection>

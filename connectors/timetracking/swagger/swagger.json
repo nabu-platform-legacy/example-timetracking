@@ -1,0 +1,748 @@
+{
+	"swagger": "2.0", 
+	"info": {
+		"title": "Application", 
+		"version": "1.0"
+	}, 
+	"host": "localhost:8080", 
+	"basePath": "/api/v1", 
+	"schemes": [
+		"http"
+	], 
+	"consumes": [
+		"application/json", 
+		"application/xml"
+	], 
+	"produces": [
+		"application/json", 
+		"application/xml"
+	], 
+	"paths": {
+		"/example/dashboard/insights/main/uninvoicedAmounts": {
+			"get": {
+				"operationId": "example.dashboard.insights.main.uninvoicedAmounts", 
+				"consumes": [], 
+				"produces": [
+					"application/json", 
+					"application/xml"
+				], 
+				"tags": [
+					"Api"
+				], 
+				"parameters": [
+					{
+						"in": "query", 
+						"name": "limit", 
+						"type": "integer", 
+						"format": "int32"
+					}, 
+					{
+						"in": "query", 
+						"name": "offset", 
+						"type": "integer", 
+						"format": "int64"
+					}, 
+					{
+						"in": "query", 
+						"type": "array", 
+						"items": {
+							"type": "string"
+						}, 
+						"name": "orderBy", 
+						"collectionFormat": "multi"
+					}, 
+					{
+						"in": "query", 
+						"name": "filter:user", 
+						"type": "string"
+					}
+				], 
+				"responses": {
+					"200": {
+						"description": "The request was successful", 
+						"schema": {
+							"$ref": "#/definitions/example.dashboard.insights.main.uninvoicedAmountsOutput"
+						}
+					}
+				}
+			}
+		}, 
+		"/example/dashboard/insights/main/dailyLog": {
+			"get": {
+				"operationId": "example.dashboard.insights.main.dailyLog", 
+				"consumes": [], 
+				"produces": [
+					"application/json", 
+					"application/xml"
+				], 
+				"tags": [
+					"Api"
+				], 
+				"parameters": [
+					{
+						"in": "query", 
+						"name": "limit", 
+						"type": "integer", 
+						"format": "int32"
+					}, 
+					{
+						"in": "query", 
+						"name": "offset", 
+						"type": "integer", 
+						"format": "int64"
+					}, 
+					{
+						"in": "query", 
+						"type": "array", 
+						"items": {
+							"type": "string"
+						}, 
+						"name": "orderBy", 
+						"collectionFormat": "multi"
+					}, 
+					{
+						"in": "query", 
+						"name": "filter:user", 
+						"type": "string"
+					}
+				], 
+				"responses": {
+					"200": {
+						"description": "The request was successful", 
+						"schema": {
+							"$ref": "#/definitions/example.dashboard.insights.main.dailyLogOutput"
+						}
+					}
+				}
+			}
+		}, 
+		"/example/dashboard/insights/main/revenueByCompany": {
+			"get": {
+				"operationId": "example.dashboard.insights.main.revenueByCompany", 
+				"consumes": [], 
+				"produces": [
+					"application/json", 
+					"application/xml"
+				], 
+				"tags": [
+					"Api"
+				], 
+				"parameters": [
+					{
+						"in": "query", 
+						"name": "limit", 
+						"type": "integer", 
+						"format": "int32"
+					}, 
+					{
+						"in": "query", 
+						"name": "offset", 
+						"type": "integer", 
+						"format": "int64"
+					}, 
+					{
+						"in": "query", 
+						"type": "array", 
+						"items": {
+							"type": "string"
+						}, 
+						"name": "orderBy", 
+						"collectionFormat": "multi"
+					}, 
+					{
+						"in": "query", 
+						"name": "filter:user", 
+						"type": "string"
+					}
+				], 
+				"responses": {
+					"200": {
+						"description": "The request was successful", 
+						"schema": {
+							"$ref": "#/definitions/example.dashboard.insights.main.revenueByCompanyOutput"
+						}
+					}
+				}
+			}
+		}, 
+		"/example/dashboard/insights/main/employeeListing": {
+			"get": {
+				"operationId": "example.dashboard.insights.main.employeeListing", 
+				"consumes": [], 
+				"produces": [
+					"application/json", 
+					"application/xml"
+				], 
+				"tags": [
+					"Api"
+				], 
+				"parameters": [
+					{
+						"in": "query", 
+						"name": "limit", 
+						"type": "integer", 
+						"format": "int32"
+					}, 
+					{
+						"in": "query", 
+						"name": "offset", 
+						"type": "integer", 
+						"format": "int64"
+					}, 
+					{
+						"in": "query", 
+						"type": "array", 
+						"items": {
+							"type": "string"
+						}, 
+						"name": "orderBy", 
+						"collectionFormat": "multi"
+					}
+				], 
+				"responses": {
+					"200": {
+						"description": "The request was successful", 
+						"schema": {
+							"$ref": "#/definitions/example.dashboard.insights.main.employeeListingOutput"
+						}
+					}
+				}
+			}
+		}, 
+		"/timetrackings": {
+			"get": {
+				"operationId": "example.dashboard.interactions.main.timetrackings.services.list", 
+				"consumes": [
+					"application/json", 
+					"application/xml"
+				], 
+				"produces": [
+					"application/json", 
+					"application/xml"
+				], 
+				"tags": [
+					"Api"
+				], 
+				"parameters": [
+					{
+						"in": "query", 
+						"name": "limit", 
+						"type": "integer", 
+						"format": "int32"
+					}, 
+					{
+						"in": "query", 
+						"name": "offset", 
+						"type": "integer", 
+						"format": "int64"
+					}, 
+					{
+						"in": "query", 
+						"type": "array", 
+						"items": {
+							"type": "string"
+						}, 
+						"name": "orderBy", 
+						"collectionFormat": "multi"
+					}, 
+					{
+						"in": "query", 
+						"name": "user", 
+						"type": "string"
+					}, 
+					{
+						"in": "query", 
+						"name": "companyName", 
+						"type": "string"
+					}
+				], 
+				"responses": {
+					"200": {
+						"description": "The request was successful", 
+						"schema": {
+							"$ref": "#/definitions/example.dashboard.interactions.main.timetrackings.types.outputList"
+						}
+					}
+				}
+			}, 
+			"post": {
+				"operationId": "example.dashboard.interactions.main.timetrackings.services.create", 
+				"consumes": [
+					"application/json", 
+					"application/xml"
+				], 
+				"produces": [
+					"application/json", 
+					"application/xml"
+				], 
+				"tags": [
+					"Api"
+				], 
+				"parameters": [
+					{
+						"in": "body", 
+						"schema": {
+							"$ref": "#/definitions/example.dashboard.interactions.main.timetrackings.types.createInput"
+						}, 
+						"name": "body"
+					}
+				], 
+				"responses": {
+					"200": {
+						"description": "The request was successful", 
+						"schema": {
+							"$ref": "#/definitions/example.dashboard.interactions.main.timetrackings.types.createOutput"
+						}
+					}
+				}
+			}
+		}, 
+		"/timetrackings/{id}": {
+			"delete": {
+				"operationId": "example.dashboard.interactions.main.timetrackings.services.delete", 
+				"consumes": [
+					"application/json", 
+					"application/xml"
+				], 
+				"produces": [
+					"application/json", 
+					"application/xml"
+				], 
+				"tags": [
+					"Api"
+				], 
+				"parameters": [
+					{
+						"in": "path", 
+						"required": true, 
+						"name": "id", 
+						"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}", 
+						"type": "string", 
+						"format": "uuid"
+					}
+				], 
+				"responses": {
+					"204": {
+						"description": "The request was successful but no content will be returned"
+					}
+				}
+			}, 
+			"put": {
+				"operationId": "example.dashboard.interactions.main.timetrackings.services.update", 
+				"consumes": [
+					"application/json", 
+					"application/xml"
+				], 
+				"produces": [
+					"application/json", 
+					"application/xml"
+				], 
+				"tags": [
+					"Api"
+				], 
+				"parameters": [
+					{
+						"in": "path", 
+						"required": true, 
+						"name": "id", 
+						"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}", 
+						"type": "string", 
+						"format": "uuid"
+					}, 
+					{
+						"in": "body", 
+						"schema": {
+							"$ref": "#/definitions/example.dashboard.interactions.main.timetrackings.types.updateInput"
+						}, 
+						"name": "body"
+					}
+				], 
+				"responses": {
+					"200": {
+						"description": "The request was successful", 
+						"schema": {
+							"$ref": "#/definitions/example.dashboard.interactions.main.timetrackings.types.updateOutput"
+						}
+					}
+				}
+			}, 
+			"get": {
+				"operationId": "example.dashboard.interactions.main.timetrackings.services.get", 
+				"consumes": [
+					"application/json", 
+					"application/xml"
+				], 
+				"produces": [
+					"application/json", 
+					"application/xml"
+				], 
+				"tags": [
+					"Api"
+				], 
+				"parameters": [
+					{
+						"in": "path", 
+						"required": true, 
+						"name": "id", 
+						"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}", 
+						"type": "string", 
+						"format": "uuid"
+					}
+				], 
+				"responses": {
+					"200": {
+						"description": "The request was successful", 
+						"schema": {
+							"$ref": "#/definitions/example.dashboard.interactions.main.timetrackings.types.output"
+						}
+					}
+				}
+			}
+		}
+	}, 
+	"definitions": {
+		"example.dashboard.interactions.main.timetrackings.types.updateInput": {
+			"type": "object", 
+			"required": [
+				"date", 
+				"durationInHours", 
+				"price"
+			], 
+			"properties": {
+				"date": {
+					"type": "string", 
+					"format": "date-time"
+				}, 
+				"durationInHours": {
+					"type": "number", 
+					"format": "double"
+				}, 
+				"price": {
+					"type": "number", 
+					"format": "double"
+				}
+			}
+		}, 
+		"example.dashboard.interactions.main.timetrackings.types.output": {
+			"type": "object", 
+			"required": [
+				"id", 
+				"date", 
+				"durationInHours", 
+				"user", 
+				"price"
+			], 
+			"properties": {
+				"id": {
+					"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}", 
+					"type": "string", 
+					"format": "uuid"
+				}, 
+				"date": {
+					"type": "string", 
+					"format": "date-time"
+				}, 
+				"durationInMinutes": {
+					"type": "number", 
+					"format": "double"
+				}, 
+				"durationInHours": {
+					"type": "number", 
+					"format": "double"
+				}, 
+				"user": {
+					"type": "string"
+				}, 
+				"team": {
+					"type": "string"
+				}, 
+				"price": {
+					"type": "number", 
+					"format": "double"
+				}, 
+				"type": {
+					"type": "string"
+				}, 
+				"companyName": {
+					"type": "string"
+				}, 
+				"contactName": {
+					"type": "string"
+				}, 
+				"invoiceable": {
+					"type": "string"
+				}, 
+				"invoiced": {
+					"type": "string"
+				}
+			}
+		}, 
+		"example.dashboard.interactions.main.timetrackings.types.createOutput": {
+			"type": "object", 
+			"required": [
+				"id", 
+				"date", 
+				"durationInHours", 
+				"user", 
+				"price"
+			], 
+			"properties": {
+				"id": {
+					"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}", 
+					"type": "string", 
+					"format": "uuid"
+				}, 
+				"date": {
+					"type": "string", 
+					"format": "date-time"
+				}, 
+				"durationInHours": {
+					"type": "number", 
+					"format": "double"
+				}, 
+				"user": {
+					"type": "string"
+				}, 
+				"price": {
+					"type": "number", 
+					"format": "double"
+				}, 
+				"companyName": {
+					"type": "string"
+				}
+			}
+		}, 
+		"example.dashboard.insights.main.uninvoicedAmountsOutput": {
+			"type": "object", 
+			"properties": {
+				"results": {
+					"type": "array", 
+					"items": {
+						"$ref": "#/definitions/example.dashboard.insights.main.uninvoicedAmounts.results"
+					}
+				}, 
+				"page": {
+					"$ref": "#/definitions/be.nabu.eai.module.services.crud.Page"
+				}
+			}
+		}, 
+		"example.dashboard.insights.main.dailyLogOutput": {
+			"type": "object", 
+			"properties": {
+				"results": {
+					"type": "array", 
+					"items": {
+						"$ref": "#/definitions/example.dashboard.insights.main.dailyLog.results"
+					}
+				}, 
+				"page": {
+					"$ref": "#/definitions/be.nabu.eai.module.services.crud.Page"
+				}
+			}
+		}, 
+		"example.dashboard.insights.main.revenueByCompanyOutput": {
+			"type": "object", 
+			"properties": {
+				"results": {
+					"type": "array", 
+					"items": {
+						"$ref": "#/definitions/example.dashboard.insights.main.revenueByCompany.results"
+					}
+				}, 
+				"page": {
+					"$ref": "#/definitions/be.nabu.eai.module.services.crud.Page"
+				}
+			}
+		}, 
+		"example.dashboard.interactions.main.timetrackings.types.updateOutput": {
+			"type": "object", 
+			"required": [
+				"id", 
+				"date", 
+				"durationInHours", 
+				"price"
+			], 
+			"properties": {
+				"id": {
+					"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}", 
+					"type": "string", 
+					"format": "uuid"
+				}, 
+				"date": {
+					"type": "string", 
+					"format": "date-time"
+				}, 
+				"durationInHours": {
+					"type": "number", 
+					"format": "double"
+				}, 
+				"price": {
+					"type": "number", 
+					"format": "double"
+				}
+			}
+		}, 
+		"example.dashboard.interactions.main.timetrackings.types.outputList": {
+			"type": "object", 
+			"properties": {
+				"results": {
+					"type": "array", 
+					"items": {
+						"$ref": "#/definitions/example.dashboard.interactions.main.timetrackings.types.output"
+					}
+				}, 
+				"page": {
+					"$ref": "#/definitions/be.nabu.eai.module.services.crud.Page"
+				}
+			}
+		}, 
+		"example.dashboard.insights.main.employeeListingOutput": {
+			"type": "object", 
+			"properties": {
+				"results": {
+					"type": "array", 
+					"items": {
+						"$ref": "#/definitions/example.dashboard.insights.main.employeeListing.results"
+					}
+				}, 
+				"page": {
+					"$ref": "#/definitions/be.nabu.eai.module.services.crud.Page"
+				}
+			}
+		}, 
+		"example.dashboard.interactions.main.timetrackings.types.createInput": {
+			"type": "object", 
+			"required": [
+				"date", 
+				"durationInHours", 
+				"user", 
+				"price"
+			], 
+			"properties": {
+				"date": {
+					"type": "string", 
+					"format": "date-time"
+				}, 
+				"durationInHours": {
+					"type": "number", 
+					"format": "double"
+				}, 
+				"user": {
+					"type": "string"
+				}, 
+				"price": {
+					"type": "number", 
+					"format": "double"
+				}, 
+				"companyName": {
+					"type": "string"
+				}
+			}
+		}, 
+		"example.dashboard.insights.main.uninvoicedAmounts.results": {
+			"type": "object", 
+			"required": [
+				"price"
+			], 
+			"properties": {
+				"invoiced": {
+					"type": "string"
+				}, 
+				"price": {
+					"type": "number", 
+					"format": "double"
+				}
+			}
+		}, 
+		"be.nabu.eai.module.services.crud.Page": {
+			"type": "object", 
+			"required": [
+				"current", 
+				"pageSize", 
+				"rowOffset", 
+				"total", 
+				"totalRowCount"
+			], 
+			"properties": {
+				"current": {
+					"type": "integer", 
+					"format": "int32"
+				}, 
+				"pageSize": {
+					"type": "integer", 
+					"format": "int64"
+				}, 
+				"rowOffset": {
+					"type": "integer", 
+					"format": "int64"
+				}, 
+				"total": {
+					"type": "integer", 
+					"format": "int32"
+				}, 
+				"totalRowCount": {
+					"type": "integer", 
+					"format": "int64"
+				}
+			}
+		}, 
+		"example.dashboard.insights.main.dailyLog.results": {
+			"type": "object", 
+			"required": [
+				"date", 
+				"durationInHours"
+			], 
+			"properties": {
+				"date": {
+					"type": "string", 
+					"format": "date-time"
+				}, 
+				"durationInHours": {
+					"type": "number", 
+					"format": "double"
+				}
+			}
+		}, 
+		"example.dashboard.insights.main.revenueByCompany.results": {
+			"type": "object", 
+			"required": [
+				"price"
+			], 
+			"properties": {
+				"companyName": {
+					"type": "string"
+				}, 
+				"price": {
+					"type": "number", 
+					"format": "double"
+				}
+			}
+		}, 
+		"example.dashboard.insights.main.employeeListing.results": {
+			"type": "object", 
+			"required": [
+				"user", 
+				"earned", 
+				"worked"
+			], 
+			"properties": {
+				"user": {
+					"type": "string"
+				}, 
+				"earned": {
+					"type": "number", 
+					"format": "double"
+				}, 
+				"worked": {
+					"type": "number", 
+					"format": "double"
+				}
+			}
+		}
+	}, 
+	"securityDefinitions": {
+		"basic": {
+			"type": "basic"
+		}
+	}
+}

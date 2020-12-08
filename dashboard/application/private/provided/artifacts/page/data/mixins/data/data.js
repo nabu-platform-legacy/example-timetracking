@@ -226,8 +226,9 @@ nabu.page.views.data.DataCommon = Vue.extend({
 			return properties;
 		},
 		hasLimit: function() {
+			var self = this;
 			return !this.operation || (!this.operation.parameters ? false : this.operation.parameters.filter(function(x) {
-				return x.name == "limit";
+				return self.getFinalName(x.name) == "limit";
 			}).length);
 		},
 		// all the actual parameters (apart from the spec-based ones)
@@ -239,7 +240,7 @@ nabu.page.views.data.DataCommon = Vue.extend({
 			if (this.operation && this.operation.parameters) {
 				var blacklist = ["limit", "offset", "orderBy", "connectionId"];
 				var parameters = this.operation.parameters.filter(function(x) {
-					return blacklist.indexOf(x.name) < 0;
+					return blacklist.indexOf(self.getFinalName(x)) < 0;
 				}).map(function(x) {
 					result.properties[x.name] = self.$services.swagger.resolve(x);
 				})
@@ -282,15 +283,17 @@ nabu.page.views.data.DataCommon = Vue.extend({
 			return keys;
 		},
 		orderable: function() {
+			var self = this;
 			// the operation must have an input parameter called "orderBy"
 			return this.operation && this.operation.parameters.filter(function(x) {
-				return x.name == "orderBy";
+				return self.getFinalName(x.name) == "orderBy";
 			}).length > 0;
 		},
 		pageable: function() {
+			var self = this;
 			// the operation must have an input parameter called "orderBy"
 			return this.operation && this.operation.parameters.filter(function(x) {
-				return x.name == "limit";
+				return self.getFinalName(x.name) == "limit";
 			}).length > 0;
 		}
 	},
@@ -304,6 +307,40 @@ nabu.page.views.data.DataCommon = Vue.extend({
 		}	
 	},
 	methods: {
+		getLimitName: function() {
+			var self = this;
+			var limit = !this.operation || !this.operation.parameters ? null : this.operation.parameters.filter(function(x) {
+				return self.getFinalName(x.name) == "limit";
+			})[0];
+			return limit == null ? null : limit.name;
+		},
+		getOffsetName: function() {
+			var self = this;
+			var limit = !this.operation || !this.operation.parameters ? null : this.operation.parameters.filter(function(x) {
+				return self.getFinalName(x.name) == "offset";
+			})[0];
+			return limit == null ? null : limit.name;
+		},
+		getOrderByName: function() {
+			var self = this;
+			var limit = !this.operation || !this.operation.parameters ? null : this.operation.parameters.filter(function(x) {
+				return self.getFinalName(x.name) == "orderBy";
+			})[0];
+			return limit == null ? null : limit.name;
+		},
+		// when we directly drag a swagger service into an application, the limit is actually under parameters
+		// so it becomes "parameter:limit".
+		getFinalName: function(param) {
+			// if we give the whole document, we just want the name
+			if (param && param.name) {
+				param = param.name;
+			}
+			if (!param) {
+				return null;
+			}
+			var parts = param.split(":");
+			return parts[parts.length - 1];
+		},
 		fieldActions: function(field) {
 			var index = this.cell.state.fields.indexOf(field);
 			return this.cell.state.actions.filter(function(x) {
@@ -1270,11 +1307,15 @@ nabu.page.views.data.DataCommon = Vue.extend({
 			// we put a best effort limit & offset on there, but the operation might not support it
 			// at this point the parameter is simply ignored
 			var limit = this.cell.state.limit != null ? parseInt(this.cell.state.limit) : 20;
-			parameters.offset = (page ? page : 0) * limit;
-			parameters.limit = limit;
 			
-			if (parameters.limit == 0) {
-				delete parameters.limit;
+			var limitName = this.getLimitName();
+			var offsetName = this.getOffsetName();
+			
+			if (limitName != null && limit != 0) {
+				parameters[limitName] = limit;
+			}
+			if (offsetName != null) {
+				parameters[offsetName] = (page ? page : 0) * limit;
 			}
 			
 			var pageInstance = self.$services.page.getPageInstance(self.page, self);
@@ -1295,7 +1336,7 @@ nabu.page.views.data.DataCommon = Vue.extend({
 			});
 			
 			if (this.orderable && this.orderBy.length) {
-				parameters.orderBy = this.orderBy;
+				parameters[this.getOrderByName()] = this.orderBy;
 			}
 			return parameters;
 		},
@@ -1338,19 +1379,43 @@ nabu.page.views.data.DataCommon = Vue.extend({
 							self.records.splice(0, self.records.length);
 						}
 						if (list) {
-							Object.keys(list).map(function(field) {
-								if (list[field] instanceof Array) {
-									list[field].forEach(function(x, i) {
-										x.$position = i;
-									});
-									nabu.utils.arrays.merge(self.records, list[field]);
-									nabu.utils.arrays.merge(self.allRecords, list[field]);
-								}
-							});
-							if (list.page) {
-								nabu.utils.objects.merge(self.paging, list.page);
+							var arrayFound = false;
+							var findArray = function(root) {
+								Object.keys(root).forEach(function(field) {
+									if (root[field] instanceof Array && !arrayFound) {
+										root[field].forEach(function(x, i) {
+											x.$position = i;
+										});
+										nabu.utils.arrays.merge(self.records, root[field]);
+										nabu.utils.arrays.merge(self.allRecords, root[field]);
+										arrayFound = true;
+									}
+									if (!arrayFound && typeof(root[field]) === "object" && root[field] != null) {
+										findArray(root[field]);
+									}
+								});
 							}
-							else if (!self.orderable) {
+							findArray(list);
+							
+							var pageFound = false;
+							var findPage = function(root) {
+								Object.keys(root).forEach(function(field) {
+									// check if we have an object that has the necessary information
+									if (typeof(root[field]) === "object" && root[field] != null && !pageFound) {
+										// these are the two fields we use and map, check if they exist
+										if (root[field].current != null && root[field].total != null) {
+											nabu.utils.objects.merge(self.paging, root[field]);
+											pageFound = true;
+										}
+										// recurse
+										if (!pageFound) {
+											findPage(root[field]);
+										}
+									}
+								});
+							}
+							findPage(list);
+							if (!pageFound && !self.orderable) {
 								self.doInternalSort();
 							}
 						}

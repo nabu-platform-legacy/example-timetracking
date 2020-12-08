@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webModule>
+    <path>/api/v1</path>
+    <webFragments>example.dashboard.interactions.main.timetrackings.services.list</webFragments>
+    <webFragments>example.dashboard.interactions.main.timetrackings.services.create</webFragments>
+    <webFragments>example.dashboard.interactions.main.timetrackings.services.delete</webFragments>
+    <webFragments>example.dashboard.interactions.main.timetrackings.services.update</webFragments>
+    <webFragments>example.dashboard.interactions.main.timetrackings.services.get</webFragments>
+</webModule>

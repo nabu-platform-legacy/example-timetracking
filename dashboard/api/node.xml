@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2020-12-04T13:47:58.452+01:00" lastModified="2020-12-04T13:47:58.452+01:00" leaf="true" name="API" version="2">
+<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2020-12-04T13:47:58.452+01:00" lastModified="2020-12-07T20:15:49.030+01:00" leaf="true" name="API" version="4">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>
+    <references>example.dashboard.interactions.main.timetrackings.services.delete</references>
+    <references>example.dashboard.interactions.main.timetrackings.services.update</references>
+    <references>example.dashboard.interactions.main.timetrackings.services.create</references>
+    <references>example.dashboard.interactions.main.timetrackings.services.list</references>
     <tags>Main API</tags>
 </node>

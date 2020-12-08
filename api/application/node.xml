@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.web.application.WebApplicationManager" created="2020-12-08T08:53:52.381+01:00" lastModified="2020-12-08T11:13:56.574+01:00" leaf="true" name="Application" version="7">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>example.shared.host</references>
+    <references>example.dashboard.insights.main.uninvoicedAmounts</references>
+    <references>example.dashboard.insights.main.dailyLog</references>
+    <references>example.dashboard.insights.main.revenueByCompany</references>
+    <references>example.dashboard.insights.main.employeeListing</references>
+    <references>example.api.api</references>
+    <references>example.api.swagger</references>
+    <references>nabu.web.swagger.swaggerui</references>
+    <references>nabu.cms.core.configuration</references>
+</node>

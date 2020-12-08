@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<swaggerProvider>
+    <basePath>/api/v1</basePath>
+    <includeAll>false</includeAll>
+    <limitToUser>false</limitToUser>
+</swaggerProvider>

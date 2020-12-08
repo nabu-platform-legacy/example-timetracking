@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection>
+    <largeIcon>connector/connector-large.png</largeIcon>
+    <mediumIcon>connector/connector-medium.png</mediumIcon>
+    <name>Connectors</name>
+    <smallIcon>connector/connector-small.png</smallIcon>
+    <subType>connectors</subType>
+    <type>folder</type>
+</collection>

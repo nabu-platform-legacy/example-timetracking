@@ -58,7 +58,7 @@ nabu.services.VueService(Vue.extend({
 			cssLastModified: null,
 			cssError: null,
 			functionError: null,
-			disableReload: false,
+			disableReload: true,
 			validations: [],
 			googleSiteVerification: null,
 			// the page we are editing?

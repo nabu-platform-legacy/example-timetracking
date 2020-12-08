@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.web.application.WebApplicationManager" created="2020-12-04T13:47:58.601+01:00" lastModified="2020-12-07T15:54:28.322+01:00" leaf="true" name="Application" version="17">
+<node artifactManager="be.nabu.eai.module.web.application.WebApplicationManager" created="2020-12-04T13:47:58.601+01:00" lastModified="2020-12-08T11:33:44.004+01:00" leaf="true" name="Application" version="23">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>
@@ -16,6 +16,8 @@
     <references>example.dashboard.insights.main.uninvoicedAmounts</references>
     <references>example.dashboard.insights.main.dailyLog</references>
     <references>example.dashboard.insights.main.employeeListing</references>
+    <references>example.connectors.timetracking.swagger.services.getExampleDashboardInsightsMainRevenueByCompany</references>
+    <references>example.connectors.timetracking.swagger.services.getTimetrackings</references>
     <references>example.dashboard.api</references>
     <references>example.dashboard.swagger</references>
     <references>nabu.web.swagger.swaggerui</references>
@@ -23,13 +25,9 @@
     <references>nabu.web.page.cms.initialAdministrator.component</references>
     <references>nabu.web.core.passwordProtect</references>
     <references>nabu.web.page.cms.component</references>
-    <references>nabu.cms.dynamic.component</references>
     <references>nabu.web.core.components</references>
     <references>nabu.web.page.core.component</references>
     <references>nabu.web.page.data.component</references>
-    <references>example.dashboard.interactions.main.timetrackings.services.list</references>
-    <references>example.dashboard.interactions.main.timetrackings.services.create</references>
-    <references>example.dashboard.interactions.main.timetrackings.services.update</references>
     <references>nabu.web.page.core.types.configuration</references>
     <references>nabu.web.core.types.passwordProtect</references>
     <references>nabu.cms.core.configuration</references>

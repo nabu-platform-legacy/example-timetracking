@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webFragmentConfigurations>
+    <parts>
+        <configuration>
+            <property key="caseInsensitive">true</property>
+            <property key="masterdata/preloadedCategories[0]">language</property>
+            <property key="masterdata/preloadedCategories[1]">attachmentGroup</property>
+        </configuration>
+        <environmentSpecific>false</environmentSpecific>
+        <type>nabu.cms.core.configuration</type>
+    </parts>
+</webFragmentConfigurations>

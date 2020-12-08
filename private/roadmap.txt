@@ -1,11 +1,29 @@
-- add interaction: crud to log custom time trackings
-	- remove a lot of the input fields? especially the optional ones...
+- add API so other systems can extract and log data (expose the CRUD?)
+
+
+- add an API application
+-> add the CRUD to it
+-> add the insights to it
+
+-> dragging & dropping onto the swaggerui should work
+	-> can reload the swagger ui automatically?
+
+-> actually run them via swaggerui
+
+
+use postman to call a service
+-> add an accept for text/csv! (only for CRUD, the insights don't work (yet))
+
+
+tiny sidestep => exposing as WSDL?
+	-> the scope private is not respected!
+
+
 
 - finishing touches:
 	- mobile friendly
 	- translations
 
 
-- add API so other systems can extract and log data (expose the CRUD?)
 
 - build a swagger client that consumes the API and uses it to remotely add data

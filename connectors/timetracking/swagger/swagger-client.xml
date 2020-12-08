@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<swaggerClient>
+    <allowDomain>false</allowDomain>
+    <exposeAllServices>false</exposeAllServices>
+    <folderStructure>PATH</folderStructure>
+    <lenient>true</lenient>
+    <operationIds>example.dashboard.interactions.main.timetrackings.services.list</operationIds>
+    <operationIds>example.dashboard.interactions.main.timetrackings.services.create</operationIds>
+    <operationIds>example.dashboard.insights.main.revenueByCompany</operationIds>
+    <showInterfaces>false</showInterfaces>
+    <throwException>true</throwException>
+</swaggerClient>
