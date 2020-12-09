@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2020-12-08T19:41:40.787+01:00" lastModified="2020-12-08T20:00:34.011+01:00" leaf="true" version="9">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.utils.String.upper</references>
+    <references>example.connectors.timetracking.swagger.types.example.dashboard.interactions.main.timetrackings.types.output</references>
+    <references>example.connectors.timetracking.swagger.services.getTimetrackings</references>
+    <references>java.lang.String</references>
+    <references>nabu.utils.String.split</references>
+</node>

@@ -1,0 +1,10 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="string" type="java.lang.String"/>
+        <field name="separator" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <field maxOccurs="unbounded" minOccurs="0" name="parts" type="java.lang.String"/>
+        <structure definition="example.connectors.timetracking.swagger.types.example.dashboard.interactions.main.timetrackings.types.output" maxOccurs="unbounded" minOccurs="0" name="results" namespace="example.connectors.timetracking.swagger"/>
+    </structure>
+</structure>
